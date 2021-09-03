@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: American Typewriter, serif;
+    background: teal;
+  }
+  
+  #container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    padding: 0 0 30px;
+    transform: translate(-50%, -50%);
+    background: PeachPuff;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+  
+  #header {
+    display: block;
+    margin: 30px 0 20px;
+    text-align: center;
+    color:#013E32;
+    font-size: 36px;
+  }
+  
+  #questionBlock {
+    display: block;
+    margin: 10px 0 30px;
+    padding: 20px 0 ;
+    text-align: center;
+    font-size: 28px;
+    color: #660033;
+    background: Salmon;
+  }
+  
+  #question {
+    position: relative;
+  }
+  
+  #answerBlock {
+    display: none;
+  }
+  
+  #start, #restart {
+    display: none;
+    position: relative;
+    left: 30%;
+    font-size: 28px;
+    width: 40%;
+    height: 80px;
+    background: #3EA99F;
+    color: #653B22;
+    border: 0;
+    border-radius: 10px;
+    font-family: Andale Mono, monospace;
+  }
+  
+  #start:hover, #restart:hover {
+    color: #3EA99F;
+    background: #653B22;
+  }
+  
+  .row {
+    display: block;
+    padding: 0px 90px;
+  }
+  
+  .row button {
+    display: inline-block;
+    width: 160px;
+    height: 90px; 
+    font-size: 16px;
+    margin: 0 -4px 0 0;
+    border: 0;
+    font-family: American Typewriter, serif;
+    color: MidnightBlue;
+  }
+  
+  #first, #naruto {
+    background: thistle;
+    border-top-left-radius: 10px;
+  }
+  
+  #first:hover, #naruto:hover {
+    color: thistle;
+    background: MidnightBlue;
+  }
+  
+  #second, #haikyuu {
+    background: Khaki;
+    border-top-right-radius: 10px;
+  }
+  
+  #second:hover, #haikyuu:hover {
+    color: Khaki;
+    background: MidnightBlue;
+  }
+  
+  #third, #onePiece {
+    background: MediumPurple;
+    border-bottom-left-radius: 10px;
+  }
+  
+  #third:hover, #onePiece:hover {
+    color: MediumPurple;
+    background: MidnightBlue;
+  }
+  
+  #fourth, #jujutsuKaisen {
+    background: #AED6F1;
+    border-bottom-right-radius: 10px;
+  }
+  
+  #fourth:hover, #jujutsuKaisen:hover {
+    color: #AED6F1;
+    background: MidnightBlue;
+  }
+  
+  @media screen and (max-width:500px) {
+    #container {
+      width: 400px;
+    }
+    
+    #header {
+      font-size: 28px;
+    }
+    
+    #questionBlock {
+      font-size: 20px;
+    }
+    
+    #start, #restart {
+      position: relative;
+      left: 120px;
+      width: 160px;
+      font-size: 20px;
+    }
+    
+    .row {
+      padding: 0px 80px;
+    }
+    
+    .row button {
+      display: inline-block;
+      width: 120px;
+      height: 90px;
+      padding: 0;
+      font-size: 14px;
+    } 
+  }
