@@ -39,9 +39,8 @@ def close_db(error):
         g.sqlite_db.close()
 
 @app.route('/')
-def show_entries():
+def show_quiz():
     return render_template('anime.html')
-
 
 if __name__ == '__main__':
     app.run()
