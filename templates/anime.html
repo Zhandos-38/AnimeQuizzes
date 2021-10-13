@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="/Users/macbookair/Documents/Internship/Anime/style.css">
+        <link rel="stylesheet" href= "{{ url_for('static', filename='style.css') }}">
         <title id="title">Anime Quizes</title>
     </head>
     <body>
@@ -35,6 +35,6 @@
             </div>
             <button id="restart">Play again</button>
         </div>
-        <script src="/Users/macbookair/Documents/Internship/Anime/script.js"></script>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
     </body>
 </html>
