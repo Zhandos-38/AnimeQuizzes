@@ -1,11 +1,10 @@
-let title = document.getElementById("title");
 let container = document.getElementById("container");
 let quizName = document.getElementById("quizName");
 let choice = document.getElementById("choice");
 let btnNaruto = document.getElementById("naruto");
 let btnHaikyuu = document.getElementById("haikyuu");
 let btnOnePiece = document.getElementById("onePiece");
-let btnJK = document.getElementById("jujutsuKaisen");
+let btnBC = document.getElementById("blackclover");
 let btn1 = document.getElementById("first");
 let btn2 = document.getElementById("second");
 let btn3 = document.getElementById("third");
@@ -35,13 +34,20 @@ class Question{
 
 let Haikyuu = [];
 let Naruto = [];
-let JK = [];
+let BC = [];
 let OnePiece = [];
 
+
+Haikyuu.push(new Question("Who scored the last point in qualifiers finals?","Tanaka","Asahi","Tsukishima","Hinata",4));
 Haikyuu.push(new Question("What is the name of main character?","Kageyama","Hinata","Tanaka","Nishinoya",2));
 Haikyuu.push(new Question("Who is the setter of Inarizaki?","Osamu Mia","Suno Rintaru","Atsumu Mia","Aaron Oudjurou",3));
 
 Naruto.push(new Question("What is Shisuyi's sharingan ability?","Tsukuyomi","Amaterasu","Kamui","Kotoamatsukami",4));
+Naruto.push(new Question("How many tails does Son Goku have?","2","3","4","5",3));
+Naruto.push(new Question("Who is the youngest Hokage ever?","Naruto","Minato","Hiruzen","Kakashi",3));
+
+BC.push(new Question("Which place did Crimson Lion get on yearly contest?","3","4","6","7",2));
+
 
 let score = 0;
 let num = 0;
@@ -72,7 +78,6 @@ function showScore() {
 btnNaruto.addEventListener('click', function() {
   choice.style.display = "none";
   quizName.innerHTML = "Naruto Quiz";
-  title.innerHTML = quizName.innerHTML;
   questionBlock.style.margin = "10px 0 80px";
   container.style.padding = "0 0 80px";
   btnStart.style.display = "block";
@@ -87,7 +92,6 @@ btnHaikyuu.addEventListener('click', function() {
   console.log("Haikyuu")
   choice.style.display = "none";
   quizName.innerHTML = "Haikyuu Quiz";
-  title.innerHTML = quizName.innerHTML;
   questionBlock.style.margin = "10px 0 80px";
   container.style.padding = "0 0 80px";
   btnStart.style.display = "block";
@@ -101,7 +105,6 @@ btnHaikyuu.addEventListener('click', function() {
 btnOnePiece.addEventListener('click', function() {
   choice.style.display = "none";
   quizName.innerHTML = "One Piece Quiz";
-  title.innerHTML = quizName.innerHTML;
   questionBlock.style.margin = "10px 0 80px";
   container.style.padding = "0 0 80px";
   btnStart.style.display = "block";
@@ -112,16 +115,15 @@ btnOnePiece.addEventListener('click', function() {
   }
 })
 
-btnJK.addEventListener('click', function() {
+btnBC.addEventListener('click', function() {
   choice.style.display = "none";
-  quizName.innerHTML = "Jujutsu Kaisen Quiz";
-  title.innerHTML = quizName.innerHTML;
+  quizName.innerHTML = "Black Clover Quiz";
   questionBlock.style.margin = "10px 0 80px";
   container.style.padding = "0 0 80px";
   btnStart.style.display = "block";
   answerBlock.style.display = "none";
   question.innerHTML = "Are you ready?";
-  for(let x of JK){
+  for(let x of BC){
     questions.push(x);
   }
 })
@@ -172,7 +174,6 @@ btnStart.addEventListener('click', function() {
 
 btnRestart.addEventListener('click', function (){
   quizName.innerHTML = "Anime quizes";
-  title.innerHTML = quizName.innerHTML;
   question.innerHTML = "Choose quiz";
   answerBlock.style.display = "none";
   choice.style.display = "block";
